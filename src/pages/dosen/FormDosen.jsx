@@ -6,15 +6,15 @@ import { useParams } from "react-router";
 import s from "../components/Tables.module.scss";
 import mock from "../components/mock.jsx";
 
-const FormBeacon = function () {
+const FormDosen = function () {
   let { id } = useParams(); //ngambil id dari url
   id = parseInt(id); //mengubah tipe data string jadi integer
-  const [beaconData] = useState(mock.beacons); //ngambil data dari file mock.jsx
+  const [dosenData] = useState(mock.dosen); //ngambil data dari file mock.jsx
   const [oldData, setOldData] = useState(); //variabel untuk menyimpan data lama (jika dalam mode edit)
 
   useEffect(() => {
     if (id) {
-      beaconData.map((item) => {
+      dosenData.map((item) => {
         if (item.id === id) {
           setOldData(item);
         }
@@ -31,7 +31,7 @@ const FormBeacon = function () {
               <Widget>
                 <div className={s.tableTitle}>
                   <div className="headline-2">
-                    {id ? "Update Beacon" : "Tambah Beacon"}
+                    {id ? "Update dosen" : "Tambah dosen"}
                   </div>
                 </div>
                 <form
@@ -44,16 +44,16 @@ const FormBeacon = function () {
                       <input
                         type="text"
                         className="form-control py-4"
-                        placeholder="UUID"
-                        aria-label="UUID"
-                        defaultValue={oldData?.uuid}
+                        placeholder="Tambah Dosen"
+                        aria-label="tambah-dosen"
+                        defaultValue={oldData?.name}
                       />
                     </div>
                     <Button
                       className="rounded-pill float-right mt-3 mb-4"
                       color="primary"
                     >
-                      {id ? "Update Beacon" : "Tambah Beacon"}
+                      {id ? "Update dosen" : "Tambah dosen"}
                     </Button>
                   </div>
                 </form>
@@ -66,4 +66,4 @@ const FormBeacon = function () {
   );
 };
 
-export default FormBeacon;
+export default FormDosen;

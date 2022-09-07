@@ -26,6 +26,14 @@ import Rooms from "../../pages/rooms/Rooms";
 import CreateRoom from "../../pages/rooms/FormRoom";
 import FormBeacon from "../../pages/beacons/FormBeacon";
 import FormRoom from "../../pages/rooms/FormRoom";
+import MataKuliah from "../../pages/matakuliah/MataKuliah";
+import FormMataKuliah from "../../pages/matakuliah/FormMataKuliah";
+import Dosen from "../../pages/dosen/Dosen";
+import FormDosen from "../../pages/dosen/FormDosen";
+import Mahasiswa from "../../pages/mahasiswa/Mahasiswa";
+import FormMahasiswa from "../../pages/mahasiswa/FormMahasiswa";
+import Presensi from "../../pages/presensi/Presensi";
+import FormPresensi from "../../pages/presensi/FormPresensi";
 
 const Layout = (props) => {
   return (
@@ -70,6 +78,77 @@ const Layout = (props) => {
             />
             <Route
               path="/dashboard/beacons/delete-room/:id"
+              exact
+              render={() => <Redirect to="/error" />}
+            />
+
+            {/* Pengguna Routes */}
+            <Route path="/dashboard/dosen" exact component={Dosen} />
+            <Route
+              path="/dashboard/dosen/create-dosen"
+              exact
+              component={FormDosen}
+            />
+            <Route
+              path="/dashboard/dosen/edit-dosen/:id"
+              exact
+              component={FormDosen}
+            />
+            <Route
+              path="/dashboard/dosen/delete-dosen/:id"
+              exact
+              render={() => <Redirect to="/error" />}
+            />
+
+            <Route path="/dashboard/mahasiswa" exact component={Mahasiswa} />
+            <Route
+              path="/dashboard/mahasiswa/create-mahasiswa"
+              exact
+              component={FormMahasiswa}
+            />
+            <Route
+              path="/dashboard/mahasiswa/edit-mahasiswa/:id"
+              exact
+              component={FormMahasiswa}
+            />
+            <Route
+              path="/dashboard/mahasiswa/delete-mahasiswa/:id"
+              exact
+              render={() => <Redirect to="/error" />}
+            />
+
+            {/* Matkul Routes */}
+            <Route path="/dashboard/mata-kuliah" exact component={MataKuliah} />
+            <Route
+              path="/dashboard/mata-kuliah/create-matkul"
+              exact
+              component={FormMataKuliah}
+            />
+            <Route
+              path="/dashboard/mata-kuliah/edit-matkul/:id"
+              exact
+              component={FormMataKuliah}
+            />
+            <Route
+              path="/dashboard/mata-kuliah/delete-matkul/:id"
+              exact
+              render={() => <Redirect to="/error" />}
+            />
+
+            {/* Presensi Routes */}
+            <Route path="/dashboard/presensi" exact component={Presensi} />
+            <Route
+              path="/dashboard/presensi/create-presensi"
+              exact
+              component={FormPresensi}
+            />
+            <Route
+              path="/dashboard/presensi/edit-presensi/:id"
+              exact
+              component={FormPresensi}
+            />
+            <Route
+              path="/dashboard/mata-kuliah/delete-matkul/:id"
               exact
               render={() => <Redirect to="/error" />}
             />

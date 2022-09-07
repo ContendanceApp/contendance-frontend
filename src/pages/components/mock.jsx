@@ -505,6 +505,87 @@ const mock = {
       status: "Sedang Digunakan",
     },
   ],
+
+  dosen: [
+    {
+      id: 1,
+      name: "Bu Umi",
+      nim: "12345",
+      email: "umi@gmail.com",
+    },
+    {
+      id: 2,
+      name: "Bu Entin",
+      nim: "123456",
+      email: "entin@gmail.com",
+    },
+    {
+      id: 3,
+      name: "Bu Nailus",
+      nim: "1234567",
+      email: "nailus@gmail.com",
+    },
+  ],
+
+  mahasiswa: [
+    {
+      id: 1,
+      name: "Muhammad Ghifari Ramadhan",
+      nrp: "3120600029",
+      email: "ghifari@gmail.com",
+    },
+    {
+      id: 2,
+      name: "Josephine Kristianti Saputra",
+      nrp: "3120600008",
+      email: "josephine@gmail.com",
+    },
+    {
+      id: 3,
+      name: "Muhammad Nur Faiz",
+      nrp: "3120600028",
+      email: "faiz@gmail.com",
+    },
+  ],
+
+  matkuls: [
+    {
+      id: 1,
+      name: "WPPL",
+    },
+    {
+      id: 2,
+      name: "WPPB",
+    },
+    {
+      id: 3,
+      name: "Kecerdasan Komputasional",
+    },
+  ],
+
+  presensi: [
+    {
+      id: 1,
+      nrp: "3120600029",
+      name: "Muhammad Ghifari Ramadhan",
+      waktu: "08.00",
+      matkul: "WPPL",
+    },
+    {
+      id: 2,
+      nrp: "3120600008",
+      name: "Josephine Kristianti Saputra",
+      waktu: "08.30",
+      matkul: "WPPB",
+    },
+    {
+      id: 3,
+      nrp: "3120600028",
+      name: "Muhammad Nur Faiz",
+      waktu: "08.15",
+      matkul: "AMJ",
+    },
+  ],
 };
 
 export default mock;

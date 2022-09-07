@@ -66,7 +66,7 @@ const Sidebar = (props) => {
           link="/dashboard/rooms"
           index="rooms"
         />
-        <LinksGroup
+        {/* <LinksGroup
           onActiveSidebarItemChange={(activeItem) =>
             props.dispatch(changeActiveSidebarItem(activeItem))
           }
@@ -76,6 +76,27 @@ const Sidebar = (props) => {
           iconName={<i className={"eva eva-people-outline"} />}
           link="/users"
           index="typography"
+        /> */}
+        <LinksGroup
+          onActiveSidebarItemChange={(activeItem) =>
+            props.dispatch(changeActiveSidebarItem(activeItem))
+          }
+          activeItem={props.activeItem}
+          header="Pengguna"
+          isHeader
+          iconName={<i className={"eva eva-people-outline"} />}
+          link="/dashboard/uielements"
+          index="uielements"
+          childrenLinks={[
+            {
+              header: "Dosen",
+              link: "/dashboard/dosen",
+            },
+            {
+              header: "Mahasiswa",
+              link: "/dashboard/mahasiswa",
+            },
+          ]}
         />
         <LinksGroup
           onActiveSidebarItemChange={(activeItem) =>
@@ -85,8 +106,8 @@ const Sidebar = (props) => {
           header="Mata Kuliah"
           isHeader
           iconName={<i className={"eva eva-calendar-outline"} />}
-          link="/users"
-          index="typography"
+          link="/dashboard/mata-kuliah"
+          index="mata-kuliah"
         />
         <LinksGroup
           onActiveSidebarItemChange={(activeItem) =>
@@ -96,8 +117,8 @@ const Sidebar = (props) => {
           header="Presensi"
           isHeader
           iconName={<i className={"eva eva-bookmark-outline"} />}
-          link="/users"
-          index="typography"
+          link="/dashboard/presensi"
+          index="presensi"
         />
         <LinksGroup
           onActiveSidebarItemChange={(activeItem) =>
